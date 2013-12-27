@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>显示文章列表</title>
+	<jquery/>
+	<bootstrap/>
+</head>
+<body>
+	<table class="table table-hover table-bordered" style="width:1000px;">
+		<tr>
+			<td>测试文章列表</td>
+			<td><a href="__CONTROL__/add" class="btn btn-success"><i class="icon-plus-sign icon-white">&nbsp;&nbsp;</i>发表文章</a></td>
+
+		</tr>
+		<foreach from="$data" key="$k" value="$v">	
+		<tr>
+			<td><a href="">{$v.title}</a></td>
+			<td><a href="" class="btn btn-primary">查看详情</a></td>
+		</tr> 
+
+	</foreach>
+	<tr>
+		<td colspan="2">{$page}</td>
+	</tr>
+   	</table>
+</body>
+</html>
