@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>显示用户详情</title>
+	<jquery />
+	<bootstrap />
+	<style type="text/css" media="screen">
+		.detail{width:400px;margin-top:100px;border:1px solid #ccc;
+		height:auto;overflow:hidden;border-top:2px solid #03A0FA;
+		}
+		.detitle{background:#E8E8E8;height:40px;line-height:40px;padding-left:25px;
+		
+		}
+		.detail ul{list-style:none;}
+		.detail ul li{clear:both;height:40px;line-height:40px;} 
+		.detail ul li span{float:left;display:block;width:100px;padding-right: 30px;
+		font-size:14px;color:#056212;font-weight:bold;}
+		.detail ul li div{float:left;}
+		.goback{margin-top:7px;margin-right:10px;}		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="detail">	
+					<div class="detitle">
+						<span class="pull-right goback"><a href="__CONTROL__/userlist" class="btn btn-small">
+							<i class="icon icon-repeat"></i>返回</a></span>
+						用户详情</div>
+				     <ul>
+				     	<li><span>用户ID</span><div>{$data.uid}</div></li>
+				     	<li><span>用户名</span><div>{$data.username}</div></li>
+				     	<li><span>注册时间</span><div>{$data.reg_time|date:'Y-d-m',@@}</div></li>
+				     </ul>
+				 </div>	
+			</div>
+		</div>
+	</div>
+</body>
+</html>
